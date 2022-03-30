@@ -32,7 +32,7 @@ html,body{
 
 /*Inner container*/
 .container{
-    max-width: 1366px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0px 33px;
 }
@@ -434,7 +434,6 @@ html,body{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 120px;
-    padding-bottom: 120px;
 }
 .process-card{
     flex-basis: 27%;
@@ -462,6 +461,122 @@ html,body{
 }
 .process-card-content h3{
     font-size: 1.05em;
+    color: var(--deep-green);
+}
+/*//////////////////////////////*/
+
+/*-----About section styles-----*/
+.about-wrapper{
+    margin-top: 150px;
+}
+.about-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-title p{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    position: relative;
+}
+.about-title p::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 30px;
+    left: 50%;
+    bottom: -25%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-clr);
+}
+.about-title h1{
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--deep-green);
+}
+
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.about-image{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+#about-img{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.about-text{
+    width: 50%;
+    padding-left: 50px;
+}
+.about-text p{
+    
+    line-height: 35px;
+    text-align: left;
+}
+/*about button styles*/
+.about-btn{
+    padding: 6px 20px;
+    margin-top: 40px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid var(--solid-black);
+    border-radius: 5em;
+    color: var(--solid-black);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.about-btn i{
+    margin-left: 5px;
+}
+.about-btn:hover{
+    letter-spacing: 2px;
+    color: var(--primary-clr);
+    border-color: var(--primary-clr);
+}
+
+/*//////////////////////////////*/
+
+/*-----Shop section styles-----*/
+.shop-wrapper{
+    margin-top: 150px;
+}
+.shop-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.shop-title p{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    position: relative;
+}
+.shop-title p::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 30px;
+    left: 50%;
+    bottom: -25%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-clr);
+}
+.shop-title h1{
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
     color: var(--deep-green);
 }
 /*//////////////////////////////*/
