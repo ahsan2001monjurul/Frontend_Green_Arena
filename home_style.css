@@ -25,6 +25,7 @@
 /* Inside HTML or Body*/
 html,body{
     font-family: 'Poppins', sans-serif;
+    --webkit-font-smoothening: antialiased;
     box-sizing: border-box;
     scroll-behavior: smooth;
     position: relative;
@@ -485,15 +486,14 @@ html,body{
     content: "";
     height: 3px;
     width: 30px;
-    left: 50%;
-    bottom: -25%;
-    transform: translate(-50%, -50%);
+    left: 0%;
+    bottom: 0%;
     background-color: var(--primary-clr);
 }
 .about-title h1{
     font-size: 2em;
-    text-align: center;
-    padding-top: 10px;
+    text-align: left;
+    padding: 5px 0px 15px 0px;
     color: var(--deep-green);
 }
 
@@ -507,33 +507,31 @@ html,body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
 }
 #about-img{
     width: 100%;
     height: auto;
-    padding: 10px;
+    margin-top: 10px;
 }
 .about-text{
     width: 50%;
-    padding-left: 50px;
+    padding-right: 50px;
 }
-.about-text p{
-    
+.about-text p{ 
     line-height: 35px;
     text-align: left;
 }
 /*about button styles*/
 .about-btn{
-    padding: 6px 20px;
-    margin-top: 40px;
+    padding: 7px 20px;
+    margin-top: 30px;
     font-family: 'Poppins',sans-serif;
     font-size: 1em;
-    font-weight: 500;
-    background-color: transparent;
-    border: 2px solid var(--solid-black);
+    font-weight:400;
+    background-color: var(--deep-green);
+    border: none;
     border-radius: 5em;
-    color: var(--solid-black);
+    color: var(--solid-white);
     cursor: pointer;
     transition: all 300ms ease;
 }
@@ -542,28 +540,26 @@ html,body{
 }
 .about-btn:hover{
     letter-spacing: 2px;
-    color: var(--primary-clr);
-    border-color: var(--primary-clr);
 }
 
 /*//////////////////////////////*/
 
 /*-----Shop section styles-----*/
 .shop-wrapper{
-    margin-top: 150px;
+    margin-top: 170px;
 }
 .shop-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 55%;
+    margin: auto;
+    text-align: center;
 }
-.shop-title p{
+.shop-title p:nth-child(1){
     text-align: center;
     font-size: 1.1em;
     font-weight: 500;
     position: relative;
 }
-.shop-title p::after{
+.shop-title p:nth-child(1):after{
     position: absolute;
     content: "";
     height: 3px;
@@ -576,7 +572,104 @@ html,body{
 .shop-title h1{
     font-size: 2em;
     text-align: center;
-    padding-top: 10px;
+    padding:10px 0px 5px 0px;
     color: var(--deep-green);
 }
+
+.shop-title h3{
+    margin-top: 35px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+.shop-title h3 a{
+    color:var(--primary-clr);
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+.shop-title h3 a:hover{
+    text-decoration: underline;
+    letter-spacing: .5px;
+}
+.shop-title h3 i{
+    font-size: .9em;
+}
+
+/*category boxes styles*/
+.category-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.category-card{
+    flex: 1 1 25%;
+    height: auto;
+    background-color: var(--light-gray);
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.category-card:nth-child(1){
+    height: 380px;
+    background-image: url('images/new_arrival.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.category-card:nth-child(2){
+    background-image: url('images/best_seller.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.accessories-card{
+    background-image: url('images/accesories.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.category-card:nth-child(4){
+    height: 380px;
+    background-image: url('images/artifi.png');
+    background-repeat: no-repeat;
+    background-size: 200px 280px;
+    background-position: center;
+}
+.cat-combine{
+    flex: 1 1 58.3%;
+    background-color: var(--light-pink);
+    margin: 20px;
+    flex-grow: 1;
+    height: 380px;
+    background-image: url('images/new-arrival.png');
+    background-repeat: no-repeat;
+    background-size: 340px 340px;
+    background-position:  90% 110% ;
+}
+
+.cat-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 95%;
+    height: 75px;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--solid-white);
+}
+.cat-card-content h3{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--deep-green);
+    letter-spacing: 2px;
+}
+.cat-card-content p{
+    color: var(--primary-clr);
+    font-weight: 500;
+}
+
 /*//////////////////////////////*/
